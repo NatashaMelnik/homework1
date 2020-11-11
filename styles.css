@@ -1,0 +1,156 @@
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.top_1 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  display: block;
+  justify-content: space-around;
+  display: flex;
+  align-content: center;
+  height: 100%;
+}
+
+.top1,
+.top2,
+.top3 {
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  background: #292727;
+  flex-basis: 30%;
+}
+
+.top3 > p {
+  text-align: right;
+  color: white;
+}
+
+.step2 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  display: block;
+  justify-content: space-around;
+  display: flex;
+  align-content: left;
+  height: 100%;
+}
+
+.secondFl {
+  text-align: left;
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  background: #292727;
+  flex-basis: 20%;
+}
+
+.secondF2 {
+  text-align: left;
+  font: 14pt;
+  color: black;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  background: #b5b0b0;
+  flex-basis: 73%;
+  align-self: flex-start;
+}
+
+.box {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  background: #b5b0b0;
+  height: 200px;
+  width: 200px;
+}
+
+.step3 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  display: block;
+  justify-content: space-around;
+  display: flex;
+  align-content: center;
+  height: 100%;
+}
+
+.step3_1 {
+  text-align: left;
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  background: #292727;
+  flex-basis: 20%;
+  height: 100px;
+  align-self: flex-end;
+}
+
+.step3_2,
+.step3_3 {
+  text-align: left;
+  color: black;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  background: #b5b0b0;
+  flex-basis: 35%;
+  align-self: flex-start;
+  height: 250px;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  display: block;
+  justify-content: space-around;
+  display: flex;
+  align-content: center;
+  height: 100%;
+}
+
+.footer > div {
+  background-color: #292727;
+  color: white;
+  width: 30%;
+}
+
+.footer > div:last-child {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer :first-child ul{
+  column-count: 2;
+  height: content-box;
+}
+
+.footer {
+  height: content-box;
+}
+
+.footer_right {
+  height: 40%;
+  flex-wrap: wrap;
+  background-color:  #292727;
+}
+
+p{
+  position: relative;
+  overflow: hidden;
+}
