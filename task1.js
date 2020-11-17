@@ -6,57 +6,49 @@ const arr_5 = [1, NaN, 3, 5, -3];
 
 const arr_ = [arr_1, arr_2, arr_3, arr_4, arr_5];
 
-let maxElements = [];
-let minElements = [];
-let arrSum = [];
-
-function findMaxElement(arr, maxElements) {
+function findMax(arr) {
+	let max = arr[0];
 	for (let i = 0; i < arr.length; i++) {
-		maxElements[i] = arr[i][0];
-		for (let j = 0; j < arr[i].length; j++) {
-			if (typeof arr[i][j] === 'number') {
-				if (arr[i][j] > maxElements[i]) {
-					maxElements[i] = arr[i][j];
-				}
+		if (typeof arr[i] === 'number' && !isNaN(arr[i])) {
+			if (arr[i] > max) {
+				max = arr[i];
 			}
 		}
-		console.log("max element in " + i + "st array is " + maxElements[i]);
-		console.log("");
 	}
-	return maxElements;
+	return max;
 }
 
-function findMinElement(arr, minElements) {
+function findMin(arr) {
+	let min = arr[0];
 	for (let i = 0; i < arr.length; i++) {
-		minElements[i] = arr[i][0];
-		for (let j = 0; j < arr[i].length; j++) {
-			if (typeof arr[i][j] === 'number') {
-				if (arr[i][j] < minElements[i]) {
-					minElements[i] = arr[i][j];
-				}
+		if (typeof arr[i] === 'number' && !isNaN(arr[i])) {
+			if (arr[i] < min) {
+				min = arr[i];
 			}
 		}
-		console.log("min element in " + i + "st array is " + minElements[i]);
-		console.log("");
 	}
-	return minElements;
+	return min;
 }
 
-function sumElements(arr, arrSum) {
+function findSum(arr) {
+	let sum = 0;
 	for (let i = 0; i < arr.length; i++) {
-		arrSum[i] = 0;
-		for (let j = 0; j < arr[i].length; j++) {
-			if (typeof arr[i][j] === 'number') {
-				arrSum[i] = arrSum[i] + arr[i][j];
-			}
+		if (typeof arr[i] === 'number' && !isNaN(arr[i])) {
+			sum = sum + arr[i];
 		}
-		console.log("sum of elements in " + i + "st array is " + arrSum[i]);
-		console.log("");
 	}
-	return arrSum;
+	return sum;
 }
 
-let maxElementsArr = findMaxElement(arr_, maxElements);
-let minElementsArr = findMinElement(arr_, minElements); 
-let arrSumArr = findMaxElement(arr_, arrSum);
+function findExtremumAndSum(arr) {
+	for (let i = 0; i < arr.length; i++) {
+		let minElement = findMin(arr[i]);
+		let maxElement = findMax(arr[i]);
+		let sumOfElements = findSum(arr[i]);
+		console.log('in ' + (i + 1) + ' array min element is ' + minElement + ', max element is ' + maxElement + ', sum is ' + sumOfElements);
+		console.log('');
+	}
+}
 
+
+let result = findExtremumAndSum(arr_);
